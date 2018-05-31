@@ -1,0 +1,68 @@
+
+----------------------------------
+
+# pipenv : combination of pip and virtualenv, ie; creates a virtualenv as well as install the required package.
+  -> installation : pip3 install pipenv / pip3 install --user pipenv
+  -> Usage:
+     first create a directory and then inside that dir run the following command.
+     $pipenv install <package_name> 
+
+     $cd <myEnv>
+     $pipenv --python 3.6 : creates a virtualenv with particular python version
+
+Creates following files after creating virtualenv:
+
+  Pipfile : replacements of requirements.txt
+  Pipfile.lock : contians versions of packages
+
+$pipenv --where : tells path where it is installed
+$pipenv --venv : tells path of virtualenv created
+$pipenv
+
+# Running the program in virtualenv
+   $pipenv run python filename.py
+
+
+$pipenv graph : lists the packages with their dependencies.
+
+   $pipenv shell : Activating the env
+   (env)$deactivate/exit : deactive the env
+
+$pipenv check : check updates
+
+$pipenv install -r requirements.txt : create virtualenv with specified packages in requirements.txt
+
+-----------------------------------------------------------------------------------------------------------------
+
+# PyLadies : 
+------------
+
+Link : https://etherpad.wikimedia.org/p/PyladiesPuneMeetup
+
+
+pywikibots
+SPARQL query
+
+----------------------------------------
+BDD:
+
+behave: uses selenium
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

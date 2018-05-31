@@ -1,0 +1,29 @@
+https://etherpad.wikimedia.org/p/PyladiesPuneMeetup
+
+Getting Started with wikidata and wikiquery
+https://upload.wikimedia.org/wikipedia/commons/6/64/Wikidata_-_A_Gentle_Introduction_for_Complete_Beginners_%28WMF_February_2017%29.pdf
+
+started with mikidata:
+https://www.wikidata.org/wiki/Wikidata:Main_Page
+
+starting with wikiquery :
+    https://query.wikidata.org/
+
+wikidata query examples:
+Indian politicians whose fathers were also politicians
+http://tinyurl.com/y969tbvg
+
+Indian politicians whose fathers were also politicians, with date of birth (mandatory) and optional date of death:
+   http://tinyurl.com/y87rubl7
+
+
+Wikidata game  
+http://tools.wmflabs.org/wikidata-game/
+https://tools.wmflabs.org/wikidata-game/distributed/#
+
+Wikidata games : API needed for developers to make more games etc
+  How to add a new Wikidata game type: http://magnusmanske.de/wordpress/?p=362
+
+Phabricator (bugs and feature requests for Wikimedia) -- http://phabricator.wikimedia.org/
+Main wiki documenting software architecture and APIs: http://mediawiki.org/
+To begin hacking on Mediawiki -- read  this: https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_become_a_MediaWiki_hacker

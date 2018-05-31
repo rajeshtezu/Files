@@ -1,0 +1,90 @@
+Flask framework :
+------------------
+
+WSGI : gateway to connect web server with your application. It is a standard, not a server, a python module, a framework, an API or any kind of software.
+link : http://wsgi.tutorial.codepoint.net/
+--> Implemented by pep 333
+--> built with jinja2 and werkzeug. jinja2 for templating         and wekkzeug for backend.
+
+pip install flask 
+pip install flask-sqlalchemy  ---> ORM
+
+host = "0.0.0.0"  ---> set when deploying on production server.
+
+-> To change flask environment variables
+import os
+port = os.environ.get("FLASK_PORT", 5000)
+debug = os.environ.get("FLASK_DEBUG", False)
+
+-> dynamic routing:
+@app.route("/greet/<name>")
+def greet(name):
+    return "Hello, {}!".format(name)
+
+# using database :
+-------------------
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABSE_URI"] = "sqlite:////flask_db/first_app.db"  # some error
+
+db = SQLAlchemy(app)
+
+class Guest(db.Model):   # creating model/table
+   id = db.Column(db.Integer, primary_key=True)
+   name = db.Column(db.String(100))
+
+    def __repr__(self):    # represent a class.
+        return "{}".format(self.name)
+
+@app.route("/hi/<guest_name>")
+def guest_log(guest_name):
+    guest = Guest(guest_name)
+    db.session.add(guest)
+    db.session.commit()
+-----------------------------------------------
+
+-> pip install flask-wtf  ---> to create form
+forms.py
+---------
+from flask_wtf import FlaskForm
+from wtforms import StringField, IntegerField, RadioField, SelectField
+from wtforms import validators
+
+class Employee(FlaskForm):
+    name = StringField("Name", [validators.DataRequired("Plz provide name")])
+    age = IntegerField("Age")
+    gender = RadioField("Gender", choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Others')])
+    location = SelectField("Location", choices=[('CHA', 'Chennai'), ('BOM', 'Mumbai') ])
+    email = StringField("Email", validators=[validators.DataRequired("Please enter email"), validators.Email("Email required")])
+    submit = SubmitField("Submit")
+
+---------------
+Now inside views.py use the form.py file's form
+
+from myproj import forms
+
+@app.route('/forms', methods = ['GET', 'POST']
+def employee():
+    form = forms.Employee()
+    if request.method == 'GET':
+        return render_template('form.html', form=form)
+    elif request.method == 'POST':
+        if form.validate():
+            print(form.name.data)  # name is html input field name
+            return "Form has been submitted successfully." 
+         return render_template('form.html', form=form) # returns form with wrong input value to correct it.
+
+
+
+tornado  ---> python webframework for socket driven application, lilke chat window.
+
+
+
+
+
+
+
+
+
+

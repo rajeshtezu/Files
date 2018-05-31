@@ -1,0 +1,45 @@
+## Django Installation:
+-----------------------
+(https://docs.djangoproject.com/en/1.11/topics/install/)
+
+-> Install python
+
+# Install Apache and mod_wsgi:
+------------------------------
+-> Django comes with inbuilt light weight server [not apache].
+
+  Follow this if willing to deploy in production : check docs
+
+# Get your database running:
+----------------------------
+ -> Officially supported database servers : PostgreSQL, MySQL, Oracle and SQLite.
+
+ -> SQLite doesn’t require running a separate server.
+
+ -> In addition to a database backend, you’ll need to make sure your Python database bindings are installed :
+
+    Database        python package
+    --------        --------------
+    PostgreSQL      psycopg2
+    MySQL           mysqlclient
+    Oracle          cx_Oracle
+
+  -> For django to use manage.py migrate to automatically create database, it will need required premissions.
+
+# Remove any old versions of Django :
+-------------------------------------
+-> If previously used pip to install djagno then simply use pip to install latest version and it will take care of
+   removing old version.
+
+
+# Install the Django code:
+--------------------------
+  # Installing an official release with pip:
+    -> Inside the virtualenv : $pip install Django
+
+  # Installing a distribution-specific package:
+
+  # Installing the development version:
+    -> If you’d like to be able to update your Django code occasionally with the latest bug fixes and improvements,
+       follow these instructions : 
+       [check docs]
