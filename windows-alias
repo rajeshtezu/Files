@@ -1,0 +1,26 @@
+@echo off
+
+DOSKEY history=doskey /history
+DOSKEY clear=cls
+DOSKEY ls=dir $*
+DOSKEY mongo="C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
+DOSKEY repo=cd /d D:\repo
+DOSKEY admin=cd /d D:\repo\Discover-Dev-1.3.0\Discover-Dev-1.3.0\source_discover\server\admin
+
+rem ******************
+rem GIT ZSH SHORTCUTS
+rem ******************
+
+DOSKEY ga=git add $*
+DOSKEY gb=git branch $*
+DOSKEY gst=git status
+DOSKEY gsta=git stash save
+DOSKEY gstaa=git stash apply
+DOSKEY gstc=git stash clear
+DOSKEY gstl=git stash list
+DOSKEY gco=git checkout $*
+DOSKEY gcb=git checkout -b $*
+DOSKEY glg=git log --stat
+DOSKEY glog=git log --oneline --decorate --graph
+DOSKEY ggpush=git push origin %git branch%
+DOSKEY ggpull=git pull origin  %git branch%
