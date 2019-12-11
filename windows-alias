@@ -23,3 +23,6 @@ DOSKEY glg=git log --stat
 DOSKEY glog=git log --oneline --decorate --graph
 DOSKEY ggpush=git push origin %git branch%
 DOSKEY ggpull=git pull origin  %git branch%
+
+
+rem https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt --- Check this link to set alias permanently
