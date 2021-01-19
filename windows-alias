@@ -26,3 +26,9 @@ DOSKEY ggpull=git pull origin  %git branch%
 
 
 rem https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt --- Check this link to set alias permanently
+
+rem - For Powershell
+rem Create a file "profile.ps1" at $PROFILE location
+rem  Execute below command if execution policy is restricted
+rem Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+rem To set alias follow https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-7.1
